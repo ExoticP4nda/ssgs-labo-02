@@ -13,6 +13,15 @@ Questo progetto fornisce una base per una semplice Command-Line Interface (CLI) 
 
 Per installare le dipendenze e avviare l'applicazione, eseguire i seguenti comandi nella cartella del progetto:
 
+## 🚀 Installazione
+
+Clona il repository:
+
+```bash
+git clone https://github.com/ExoticP4nda/ssgs-labo-02.git
+cd ssgs-labo-02
+```
+
 ```bash
 # Installa le dipendenze
 npm install
@@ -20,7 +29,7 @@ npm install
 # Avvia l'applicazione CLI
 npm start 
 
-# Esegui i test (se presenti)
+# Esegui i test
 npm test
 ```
 ---
@@ -117,6 +126,35 @@ Per eseguire i test, usa il comando:
 ```bash
 npm test
 ```
-# Nota
+## Nota
 
 I test raggiungo una coverage di 100%
+
+
+# Continuous Integration (CI) con GitHub Actions
+Questo progetto utilizza GitHub Actions per eseguire la Continuous Integration (CI) automatica.
+
+## Trigger del workflow
+Il workflow si attiva automaticamente nei seguenti casi:
+
+Push sul branch main
+
+Pull Request verso il branch main
+
+## Cosa fa il workflow Node.js CI
+Il file di workflow si trova in .github/workflows/nodejs.yml e include i seguenti passaggi:
+
+Checkout del repository
+
+Setup di Node.js (versione 18) con caching dei moduli npm
+
+Installazione delle dipendenze (npm ci)
+
+Esecuzione dei test (npm test)
+
+Upload del report di code coverage come artifact (cartella ./coverage)
+
+## Report di copertura
+Dopo l'esecuzione dei test, il report di code coverage viene generato nella directory coverage/ e caricato come artifact accessibile dalla pagina del workflow.
+Può essere scaricato e visualizzato localmente in formato HTML.
+
