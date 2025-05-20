@@ -2,18 +2,6 @@
 
 Questo progetto fornisce una base per una semplice Command-Line Interface (CLI) Node.js che offre diverse utilità per la manipolazione di stringhe.
 
-## Nota Importante per lo Studente - Setup Iniziale del Progetto
-
-Benvenuto/a a `labo-string`!
-
-Questo repository è un **template di partenza** per il tuo laboratorio valutato. Come avrai modo di leggere nelle istruzioni del laboratorio, una parte fondamentale del tuo lavoro iniziale (Esercizio 1) consisterà nell'analizzare attentamente la struttura e la configurazione corrente di questo progetto.
-
-**Potresti notare che alcuni aspetti della configurazione iniziale – inclusa questa stessa documentazione (`README.md`), il file `package.json` e la gestione dei file da ignorare (`.gitignore`) – sono stati volutamente lasciati incompleti o potrebbero non seguire tutte le best practice per un progetto Node.js.**
-
-Il tuo primo compito sarà proprio quello di identificare queste aree di miglioramento e apportare le necessarie correzioni e completamenti, come dettagliato nelle istruzioni del laboratorio, per portare il progetto a uno standard qualitativo superiore.
-
-Buona analisi e buon lavoro!
-
 ## Funzionalità Principali (Previste)
 
 * Inversione di una stringa.
@@ -23,8 +11,89 @@ Buona analisi e buon lavoro!
 
 ## Installazione e Avvio
 
-*(Questa sezione dovrà essere completata dallo studente come parte dell'Esercizio 1, includendo i comandi per installare le dipendenze ed eseguire l'applicazione e i test).*
+Per installare le dipendenze e avviare l'applicazione, eseguire i seguenti comandi nella cartella del progetto:
+
+```bash
+# Installa le dipendenze
+npm install
+
+# Avvia l'applicazione CLI
+npm start 
+
+# Esegui i test (se presenti)
+npm test
+```
+---
+# Labo-String: CLI per Utilità su Stringhe
+
+Questo progetto fornisce una Command-Line Interface (CLI) in Node.js che permette di eseguire diverse operazioni di manipolazione su stringhe, tramite il file `index.js`.
+
+## Funzionalità di `index.js`
+
+Il file `index.js` permette di eseguire, tramite argomenti da riga di comando, le seguenti funzioni:
+
+1. **Inverti Stringa**  
+   Inverte l’ordine dei caratteri della stringa fornita.  
+   **Esempio:**  
+   ```
+   node index.js 1 "ciao"
+   // Output: Stringa invertita: "oaic"
+   ```
+
+2. **Controlla Palindromo**  
+   Verifica se la stringa fornita è palindroma (uguale se letta da sinistra a destra e viceversa).  
+   **Esempio:**  
+   ```
+   node index.js 2 "anna"
+   // Output: La stringa "anna" è palindroma? true
+   ```
+
+3. **Tronca Stringa**  
+   Tronca la stringa alla lunghezza massima specificata.  
+   **Esempio:**  
+   ```
+   node index.js 3 "esempio" 4
+   // Output: Stringa troncata (max 4): "esem"
+   ```
+
+4. **Conta Caratteri**  
+   Conta le occorrenze di ciascun carattere nella stringa fornita.  
+   **Esempio:**  
+   ```
+   node index.js 4 "test"
+   // Output: Conteggio caratteri per "test": { t: 2, e: 1, s: 1 }
+   ```
+
+## Utilizzo
+
+Per eseguire una funzione, usa il comando:
+```
+node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
+```
+- `<numero_funzione>`:  
+  1 = Inverti Stringa  
+  2 = Controlla Palindromo  
+  3 = Tronca Stringa (richiede anche `<lunghezza_massima>`)  
+  4 = Conta Caratteri
+
+- `<stringa_input>`: la stringa su cui operare
+- `[parametro_aggiuntivo]`: solo per la funzione 3, indica la lunghezza massima
+
+## Esempi
+
+```bash
+node index.js 1 "ciao"
+node index.js 2 "anna"
+node index.js 3 "esempio" 4
+node index.js 4 "test"
+```
+
+## Requisiti
+
+- [Node.js](https://nodejs.org/) installato sul sistema
+
+## Note
+
+Se vengono forniti argomenti errati o mancanti, il programma mostra un messaggio di errore e termina.
 
 ---
-
-*Suggerimento: Presta particolare attenzione ai requisiti dell'Esercizio 1 del laboratorio per completare e correggere questo README e gli altri file di configurazione.*
