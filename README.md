@@ -97,3 +97,26 @@ node index.js 4 "test"
 Se vengono forniti argomenti errati o mancanti, il programma mostra un messaggio di errore e termina.
 
 ---
+
+## Test Automatici
+
+Per garantire il corretto funzionamento delle funzioni di manipolazione delle stringhe, sono stati implementati test automatici utilizzando [Jest](https://jestjs.io/).
+
+I test si trovano nel file `src/tests/stringUtils.test.js` e verificano che ogni funzione (`reverseString`, `isPalindrome`, `truncateString`, `countCharacters`) si comporti come previsto in vari casi, inclusi casi limite e input particolari.
+
+### Perché abbiamo aggiunto i test?
+
+- **Affidabilità:** I test assicurano che le funzioni restituiscano sempre i risultati attesi.
+- **Manutenzione:** Permettono di modificare il codice senza rischiare di introdurre errori.
+- **Documentazione:** Mostrano con esempi pratici come dovrebbero funzionare le funzioni.
+
+### Come eseguire i test
+
+Per eseguire i test, usa il comando:
+
+```bash
+npm test
+```
+# Nota
+
+I test raggiungo una coverage di 100%
